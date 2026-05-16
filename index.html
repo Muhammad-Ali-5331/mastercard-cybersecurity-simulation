@@ -1,0 +1,744 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Mastercard Cybersecurity Job Simulation</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="8117d6d9-00b1-4ade-95b5-7aa15df1180e" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.1.0&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🛡️</span></div><h1 class="page-title" dir="auto">Mastercard Cybersecurity Job Simulation</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="ltr"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="b09d829c-3192-41ac-86cb-9dd6c2ba4d8a"><div style="font-size:1.5em"><span class="icon">🧾</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="93802fea-230f-414d-8824-f591680c9423" class="">Use this page to track the 3 tasks in order. Expand each task, complete the checklist, and write quick notes on what you learned.</p></div></div></figure></div><div style="display:contents" dir="auto"><h2 id="f65b5364-a040-47aa-992b-62b800fb1874" class="">Task 1 (do first)</h2></div><div style="display:contents" dir="auto"><ul id="505e51d7-bbc6-4de6-a83e-e1d8c0a6f0b0" class="toggle"><li><details open=""><summary>✅ Checklist + notes</summary><div style="display:contents" dir="auto"><h3 id="b8d4e45d-3684-4af6-a539-19317e97f88f" class="">To-do ( Examine an obvious fake email and make it more believable )</h3></div><div style="display:contents" dir="auto"><ul id="0e8353d2-4088-4379-8af4-32fd35003664" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Identify an obvious looking phishing email</span><div class="indented"></div></li></ul></div><div style="display:contents" dir="auto"><ul id="4d28fdd4-f413-45ea-94f8-9730fa7f7acd" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Improve a phishing email</span><div class="indented"></div></li></ul></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-806c-ae99-d55caa88cfce" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Compose a phishing email</span><div class="indented"></div></li></ul></div><div style="display:contents" dir="auto"><ul id="8bba3af0-5c32-45bc-926a-ff98ba80625f" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Submit/finish Task 1 on Forage</span><div class="indented"></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="730f90aa-14fb-4731-98e5-c56839b3f92a" class="">What I learned</h3></div><div style="display:contents" dir="auto"><ul id="33db44f4-c5d5-4e6a-b337-47ff620f98d1" class="bulleted-list"><li style="list-style-type:disc">What threat phishing presents to an organization</li></ul></div><div style="display:contents" dir="auto"><ul id="6fe23793-4d55-413b-81d3-a0101d1dd9a1" class="bulleted-list"><li style="list-style-type:disc">What different types of phishing emails look like</li></ul></div><div style="display:contents" dir="auto"><ul id="9e340a8d-8b4a-45da-b2b2-8dfa16e3d2b4" class="bulleted-list"><li style="list-style-type:disc">How Mastercard prevents and mitigates phishing threats</li></ul></div><div style="display:contents" dir="auto"><h3 id="34c7632c-f520-4d7a-845e-a4b4c15cdee7" class="">Key outcome</h3></div><div style="display:contents" dir="auto"><ul id="937471a0-751e-4ed2-a99f-6deeccfd092d" class="bulleted-list"><li style="list-style-type:disc">Identify phishing email</li></ul></div><div style="display:contents" dir="auto"><ul id="28208eaf-bd7c-4b01-9243-b84a2e0ba356" class="bulleted-list"><li style="list-style-type:disc">Improve &amp; Compose a phishing email</li></ul></div><div style="display:contents" dir="ltr"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="27cc80e1-849f-43f9-9f00-5969b664e395"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="fc54aa07-9271-4668-aa5a-2b93cfa3df33" class=""><strong>Explanation:</strong></p></div><div style="display:contents" dir="auto"><h1 id="362c68a8-12e7-8094-85ef-d0917c132971" class="">My Role:</h1></div><div style="display:contents" dir="auto"><p id="362c68a8-12e7-80be-b262-fb68a3e24900" class=""><strong>I was working in a Security Awareness Team.</strong></p></div><div style="display:contents" dir="auto"><p id="362c68a8-12e7-8097-8ae0-c1574d678d5c" class="">First task was to identify phishing emails. </p></div><div style="display:contents" dir="auto"><p id="362c68a8-12e7-8098-87e4-f887688953af" class="">First MCQs: The first mock was a test to identify phishing email: </p></div><div style="display:contents" dir="ltr"><figure id="362c68a8-12e7-8086-a510-e97f89c89819" class="image"><a href="image.png"><img style="width:528px" src="image.png"/></a></figure></div><div style="display:contents" dir="auto"><p id="362c68a8-12e7-8080-adbf-d74b210f32c2" class="">2nd MCQs: It was to tell how to improve the previous phishing email:</p></div><div style="display:contents" dir="ltr"><figure id="362c68a8-12e7-8072-94b9-cb335f762916" class="image"><a href="image%201.png"><img style="width:528px" src="image%201.png"/></a></figure></div><div style="display:contents" dir="auto"><hr id="362c68a8-12e7-8068-9602-d79a76e82832"/></div><div style="display:contents" dir="auto"><h1 id="362c68a8-12e7-8078-8fc1-d863bc612bbd" class="">Characteristics Of Good Phishing Email</h1></div><div style="display:contents" dir="auto"><p id="362c68a8-12e7-806c-8892-defae485cf4a" class="">To create a ‘good’ phishing email, you should:</p></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-80c0-a307-eab54eca686c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-orange_background"><strong>Add some context</strong></mark> at the beginning - make it relevant to a targeted person</li></ul></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-804e-a35a-ebffec26ccac" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-orange_background"><strong>Mask the hyperlink</strong></mark> within text</li></ul></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-806b-b3f0-dd71f8aa7e2c" class="bulleted-list"><li style="list-style-type:disc">Use <mark class="highlight-orange_background"><strong>correct spelling and grammar</strong></mark></li></ul></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-8069-bfff-edefce5dff22" class="bulleted-list"><li style="list-style-type:disc">Add <mark class="highlight-orange_background"><strong>points of legitimacy</strong></mark></li></ul></div><div style="display:contents" dir="auto"><p id="362c68a8-12e7-8009-bc8d-d4d64d744889" class="">During my correction I learned:</p></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-8065-aff4-c4dba2e3a18b" class="bulleted-list"><li style="list-style-type:disc">Use a legit email in “from” that looks from a relevant domain</li></ul></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-80f0-8238-cecf61da7a70" class="bulleted-list"><li style="list-style-type:disc">Never do any spelling mistake</li></ul></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-80e6-91ec-e98ba03e0b56" class="bulleted-list"><li style="list-style-type:disc">Never sound overly dramatic and unprofessional</li></ul></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-80d8-a1fc-fa752e7b1340" class="bulleted-list"><li style="list-style-type:disc">Always try to start with the Employee Name like Hello &lt;name&gt;/generic introduction</li></ul></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-80f6-9311-cbe31c7d5eb2" class="bulleted-list"><li style="list-style-type:disc">Always try to add urgency (like “in the next hour”) and fear of consequences (like “account will be blocked”)</li></ul></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-8029-a6f1-c9729dde0b5d" class="bulleted-list"><li style="list-style-type:disc">Try to point to any upcoming event.</li></ul></div><div style="display:contents" dir="auto"><h1 id="362c68a8-12e7-8015-a15d-e201636eb2ae" class=""><strong>Example Phishing Email</strong></h1></div><div style="display:contents" dir="ltr"><figure id="362c68a8-12e7-8012-94b5-f421bd2453c4" class="image"><a href="image%202.png"><img style="width:600.65625px" src="image%202.png"/></a></figure></div></div></figure></div></details></li></ul></div><div style="display:contents" dir="auto"><hr id="362c68a8-12e7-8044-ac59-c742ae6513e3"/></div><div style="display:contents" dir="auto"><h2 id="4da961c7-4ab9-4f64-9d89-1b16bc7d6c7f" class="">Task 2 (Identify &amp; Train Your Teams)</h2></div><div style="display:contents" dir="auto"><ul id="1da12150-17ef-4089-8141-54cb34360520" class="toggle"><li><details open=""><summary>✅ Checklist + notes</summary><div style="display:contents" dir="auto"><h3 id="8b04279a-6c13-4962-9657-68d534f7d996" class="">To-do</h3></div><div style="display:contents" dir="auto"><ul id="abe48757-67c4-4409-ad40-824a816dd6d0" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Interpret the conducted results</span><div class="indented"></div></li></ul></div><div style="display:contents" dir="auto"><ul id="5e6770f0-3d07-40be-8192-fd153358172f" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Submit/finish Task 2 on Forage</span><div class="indented"></div></li></ul></div><div style="display:contents" dir="auto"><h3 id="bfe6b5ef-1b7a-4890-9a57-1a22f58a4e40" class="">What I learned</h3></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-806a-a10d-d8bb6206bc21" class="bulleted-list"><li style="list-style-type:disc">How to identify which areas of the business need more awareness about phishing</li></ul></div><div style="display:contents" dir="auto"><ul id="362c68a8-12e7-80cc-9f6f-ce3f36ac7e68" class="bulleted-list"><li style="list-style-type:disc">How to design and implement the appropriate training for those teams to lower our risk of an attack</li></ul></div><div style="display:contents" dir="auto"><h3 id="41bd706a-9d54-426a-82af-033bb966838d" class="">Key outcome</h3></div><div style="display:contents" dir="auto"><ul id="9679dcd7-35c0-4c56-89d5-32eef1289f1b" class="bulleted-list"><li style="list-style-type:disc">Create a short presentation to help teams improve security awareness</li></ul></div><div style="display:contents" dir="ltr"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ffb22260-36c5-491d-adc4-1a6dd581ece6"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%"><div style="display:contents" dir="auto"><p id="fe2e5d06-85f5-448b-b556-240d13dd23fc" class=""><strong>Explanation:</strong></p></div><div style="display:contents" dir="auto"><h2 id="362c68a8-12e7-80e8-adf9-fc6618fccef3" class=""><strong>First task</strong></h2></div><div style="display:contents" dir="auto"><p id="362c68a8-12e7-8063-8718-eb2394739367" class="">It was to interpret the results. The table looked like:</p></div><div style="display:contents" dir="ltr"><table id="362c68a8-12e7-80ac-9084-cd9c1df6a178" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="362c68a8-12e7-8027-8c49-cbf75dcbcbb5"><td id="ONEf" class=""><strong>Team</strong></td><td id="H|qI" class=""><strong><span style="border-bottom:0.05em solid">Email open rate</span></strong></td><td id="dGYL" class=""><strong><span style="border-bottom:0.05em solid">Email click-through rate</span></strong></td><td id="S\Nh" class=""><strong><span style="border-bottom:0.05em solid">Phishing success rate</span></strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="362c68a8-12e7-8068-a5d4-f80cd852bbc8"><td id="ONEf" class="">IT</td><td id="H|qI" class="">80%</td><td id="dGYL" class="">2%</td><td id="S\Nh" class="">0%</td></tr></div><div style="display:contents" dir="ltr"><tr id="362c68a8-12e7-80c1-80a1-fb69d504b229"><td id="ONEf" class="">HR</td><td id="H|qI" class="">100%</td><td id="dGYL" class="">85%</td><td id="S\Nh" class="">75%</td></tr></div><div style="display:contents" dir="ltr"><tr id="362c68a8-12e7-80ca-8262-c2bcdb116bdf"><td id="ONEf" class="">Card Services</td><td id="H|qI" class="">60%</td><td id="dGYL" class="">50%</td><td id="S\Nh" class="">10%</td></tr></div><div style="display:contents" dir="ltr"><tr id="362c68a8-12e7-8057-967c-e618ec1f2a51"><td id="ONEf" class="">Reception</td><td id="H|qI" class="">40%</td><td id="dGYL" class="">10%</td><td id="S\Nh" class="">0%</td></tr></div><div style="display:contents" dir="ltr"><tr id="362c68a8-12e7-80a0-bf8c-d91ac91029a6"><td id="ONEf" class="">Engineering</td><td id="H|qI" class="">70%</td><td id="dGYL" class="">4%</td><td id="S\Nh" class="">1%</td></tr></div><div style="display:contents" dir="ltr"><tr id="362c68a8-12e7-801e-bc69-f6ccf2d86441"><td id="ONEf" class="">Marketing</td><td id="H|qI" class="">65%</td><td id="dGYL" class="">40%</td><td id="S\Nh" class="">38%</td></tr></div><div style="display:contents" dir="ltr"><tr id="362c68a8-12e7-8046-9a73-ddb5471d59a0"><td id="ONEf" class="">R&amp;D</td><td id="H|qI" class="">50%</td><td id="dGYL" class="">5%</td><td id="S\Nh" class="">2%</td></tr></div><div style="display:contents" dir="ltr"><tr id="362c68a8-12e7-80b3-a55d-c70fae90cd01"><td id="ONEf" class=""><strong>Overall average</strong></td><td id="H|qI" class=""><strong>66%</strong></td><td id="dGYL" class=""><strong>28%</strong></td><td id="S\Nh" class=""><strong>18%</strong></td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><p id="362c68a8-12e7-8091-8ee2-ebb671c7092b" class="">Then a single MCQ asked which departments performed the worst against the phishing attack.</p></div><div style="display:contents" dir="auto"><hr id="362c68a8-12e7-80d2-ac9f-cf8f43a9b9b9"/></div><div style="display:contents" dir="auto"><h2 id="362c68a8-12e7-8023-83b4-dd41a09f02cc" class="">Second Task</h2></div><div style="display:contents" dir="auto"><p id="362c68a8-12e7-80cb-9b6f-fe275845c405" class="">It was to prepare a presentation for the departments that performed the worst against the phishing attack.</p></div><div style="display:contents" dir="auto"><p id="362c68a8-12e7-8026-bcc7-d91a75e55611" class="">My presentation:</p></div><div style="display:contents" dir="ltr"><figure id="362c68a8-12e7-8043-a6de-f7d168ca11f7"><div class="source"><a href="Potential_presentation_template_Task_2_(3).pptx">Potential presentation template Task 2 (3).pptx</a></div></figure></div></div></figure></div></details></li></ul></div><div style="display:contents" dir="auto"><hr id="523b9ef1-0bdb-4897-983d-c72fd7808b27"/></div><div style="display:contents" dir="auto"><h2 id="7e8c0838-8f50-49f2-9314-39c041e3e2c0" class="">Overall reflection (after all 2 tasks)</h2></div><div style="display:contents" dir="auto"><ul id="3bd88a98-dfc1-4fa7-937a-ec884a4ae222" class="bulleted-list"><li style="list-style-type:disc"><strong>Biggest takeaway:</strong> Phishing is effective when it feels relevant and urgent, so prevention depends on both strong awareness habits (spotting social engineering) and targeted training for higher-risk teams.</li></ul></div><div style="display:contents" dir="auto"><ul id="11d5b6c6-c1a6-47c5-9591-04739abfc8b1" class="bulleted-list"><li style="list-style-type:disc"><strong>Skills I practiced:</strong><div style="display:contents" dir="auto"><ul id="28965d90-8fc6-4aa8-bd35-e01042f1b2a6" class="bulleted-list"><li style="list-style-type:circle">Communication</li></ul></div><div style="display:contents" dir="auto"><ul id="5dd3e9ab-b12f-48b9-b3ab-82c9e353c901" class="bulleted-list"><li style="list-style-type:circle">Cybersecurity</li></ul></div><div style="display:contents" dir="auto"><ul id="2866e63b-ea94-4cbc-9b42-745b9c15c42b" class="bulleted-list"><li style="list-style-type:circle">Data analysis</li></ul></div><div style="display:contents" dir="auto"><ul id="190db5e5-c978-4bf7-9c7d-40a709f211f8" class="bulleted-list"><li style="list-style-type:circle">Data visualization</li></ul></div><div style="display:contents" dir="auto"><ul id="cf435312-c04d-47e5-a60c-8776384f44bc" class="bulleted-list"><li style="list-style-type:circle">Design thinking</li></ul></div><div style="display:contents" dir="auto"><ul id="8722f022-474d-4221-91d3-af8b6f16b9ec" class="bulleted-list"><li style="list-style-type:circle">Problem solving</li></ul></div><div style="display:contents" dir="auto"><ul id="e1dd0dad-b43d-4e3d-89a6-4505a51b802c" class="bulleted-list"><li style="list-style-type:circle">Security awareness</li></ul></div><div style="display:contents" dir="auto"><ul id="4799cdcc-7d30-483e-b509-a090ab16c36c" class="bulleted-list"><li style="list-style-type:circle">Security training</li></ul></div><div style="display:contents" dir="auto"><ul id="29fce58d-f694-4bfc-81af-b1d0eaffd97d" class="bulleted-list"><li style="list-style-type:circle">Strategy</li></ul></div></li></ul></div><div style="display:contents" dir="auto"><p id="362c68a8-12e7-8074-ba2a-db059a4eeb2e" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
